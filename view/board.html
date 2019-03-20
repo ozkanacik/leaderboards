@@ -1,0 +1,43 @@
+<html>
+
+<body bgcolor="black">
+
+    <div style="padding: 30px; margin:10%;margin-top:5%;background-color:#252628">
+
+        <table width="100%" border="1">
+            <thead>
+                <th style="color:aliceblue">sıra</th>
+                <th style="color:aliceblue">adı</th>
+                <th style="color:aliceblue">yaşı</th>
+                <th style="color:aliceblue">puan</th>
+            </thead>
+            <tbody>
+                    
+                        
+            </tbody>
+          
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script>
+        person = JSON.parse('<%-prs-%>');
+        for(i in person){
+
+            console.log(person[i].dif)
+            dif = ((person[i].dif)>0) ? "+"+(person[i].dif):(person[i].dif);
+            $( "tbody" ).append( '<tr>'
+                            +'<td style="color:aliceblue">'+person[i].sequence+'</td>'
+                            +'<td style="color:aliceblue">'+person[i].userName+"("+dif+')</td>'
+                            +'<td style="color:aliceblue">'+person[i].age+'</td>'
+                            +'<td style="color:aliceblue">'+person[i].score+'</td>'
+                        +'</tr>' );
+            console.log(person[i]);
+        }
+    </script>
+
+</body>
+
+
+
+</html>
